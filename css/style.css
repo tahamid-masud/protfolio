@@ -1,0 +1,834 @@
+/* ==========================================
+   GLOBAL SETTINGS
+========================================== */
+
+:root{
+
+    --bg:#090b12;
+    --bg2:#111827;
+
+    --cyan:#00E5FF;
+    --cyan2:#00C2FF;
+
+    --red:#ff355d;
+
+    --text:#f8f9fa;
+    --gray:#bfc9d1;
+
+    --glass:rgba(255,255,255,.05);
+
+    --border:rgba(255,255,255,.12);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#090b12,#0d1323,#111827);
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#080808;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--cyan);
+
+    border-radius:20px;
+
+}
+
+/* ==========================================
+   PARTICLES
+========================================== */
+
+#particles-js{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:-2;
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    padding:20px 0;
+
+    transition:.4s;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(8,10,20,.45);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.logo{
+
+    color:var(--cyan);
+
+    font-size:28px;
+
+    font-family:'Orbitron',sans-serif;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.logo:hover{
+
+    color:white;
+
+}
+
+.nav-link{
+
+    color:white;
+
+    margin-left:18px;
+
+    transition:.3s;
+
+    font-weight:500;
+
+}
+
+.nav-link:hover{
+
+    color:var(--cyan);
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+#home{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.hello{
+
+    color:var(--cyan);
+
+    margin-bottom:20px;
+
+    font-size:26px;
+
+}
+
+#typing{
+
+    font-size:62px;
+
+    line-height:1.3;
+
+    font-family:'Orbitron';
+
+    margin-bottom:25px;
+
+}
+
+.location{
+
+    color:var(--gray);
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    margin-top:25px;
+
+}
+
+.btn-cyan{
+
+    background:var(--cyan);
+
+    color:black;
+
+    padding:14px 35px;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    margin-right:15px;
+
+    transition:.4s;
+
+}
+
+.btn-cyan:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 30px var(--cyan);
+
+}
+
+/* ==========================================
+   PROFILE
+========================================== */
+
+.profile-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.rotating-border{
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:linear-gradient(45deg,
+    var(--cyan),
+    var(--red),
+    var(--cyan));
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    animation:rotateBorder 8s linear infinite;
+
+    box-shadow:0 0 45px rgba(0,229,255,.35);
+
+}
+
+.profile-image{
+
+    width:390px;
+
+    height:390px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:8px solid #111827;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.btn-outline-light{
+
+    border-radius:40px;
+
+    padding:14px 35px;
+
+}
+
+/* ==========================================
+   LOADER
+========================================== */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#06080f;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+}
+
+.terminal{
+
+    font-family:monospace;
+
+    color:var(--cyan);
+
+    font-size:18px;
+
+}
+
+.terminal p{
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================================
+   SCROLL ICON
+========================================== */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-size:26px;
+
+    animation:float 2s infinite;
+
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section-title{
+
+    font-size:48px;
+
+    text-align:center;
+
+    font-family:'Orbitron';
+
+    color:white;
+
+    margin-bottom:70px;
+
+}
+
+/* ==========================================
+   GLASS CARD
+========================================== */
+
+.glass{
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+}
+
+/* ==========================================
+   SOCIAL ICONS
+========================================== */
+
+.social{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#141d30;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:22px;
+
+    transition:.4s;
+
+}
+
+.social:hover{
+
+    background:var(--cyan);
+
+    color:black;
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px var(--cyan);
+
+}
+
+/* ==========================================
+   SERVICE CARD
+========================================== */
+
+.service-card{
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    transition:.5s;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 0 35px rgba(0,229,255,.3);
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    padding:50px;
+
+    text-align:center;
+
+    color:#bcbcbc;
+
+}
+
+/*============================
+CUSTOM CURSOR
+=============================*/
+
+body{
+
+cursor:none;
+
+}
+
+.cursor-dot{
+
+position:fixed;
+
+width:8px;
+
+height:8px;
+
+background:#00E5FF;
+
+border-radius:50%;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+z-index:99999;
+
+}
+
+.cursor-outline{
+
+position:fixed;
+
+width:34px;
+
+height:34px;
+
+border:2px solid #00E5FF;
+
+border-radius:50%;
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+transition:.08s;
+
+z-index:99998;
+
+}
+/* ============================
+ABOUT SECTION
+============================ */
+
+.about-card{
+
+margin-top:30px;
+
+}
+
+.about-text{
+
+font-size:18px;
+
+line-height:2;
+
+color:#d9d9d9;
+
+}
+
+/* ============================
+STATISTICS
+============================ */
+
+.stats-container{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+}
+
+.stat-box{
+
+background:rgba(255,255,255,.04);
+
+padding:30px;
+
+text-align:center;
+
+border-radius:15px;
+
+transition:.4s;
+
+}
+
+.stat-box:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px rgba(0,229,255,.3);
+
+}
+
+.stat-box h2{
+
+color:#00E5FF;
+
+font-size:42px;
+
+}
+
+/* ============================
+SKILLS
+============================ */
+
+.progress{
+
+height:10px;
+
+background:#222;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.progress-bar{
+
+width:0;
+
+transition:2s;
+
+}
+
+/* ============================
+SOCIAL
+============================ */
+
+.social{
+
+margin:auto;
+
+}
+/* ===============================
+SERVICES
+===============================*/
+
+.service-card{
+
+position:relative;
+
+overflow:hidden;
+
+height:100%;
+
+background:rgba(255,255,255,.04);
+
+padding:40px;
+
+border-radius:25px;
+
+transition:.5s;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.service-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(0,229,255,.08),
+
+transparent
+
+);
+
+transition:.8s;
+
+}
+
+.service-card:hover::before{
+
+left:100%;
+
+}
+
+.service-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 45px rgba(0,229,255,.25);
+
+}
+
+.service-icon{
+
+width:80px;
+
+height:80px;
+
+border-radius:20px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+background:rgba(0,229,255,.1);
+
+font-size:34px;
+
+margin-bottom:25px;
+
+color:#00E5FF;
+
+}
+
+.service-card h3{
+
+margin-bottom:20px;
+
+font-family:'Orbitron';
+
+}
+
+.service-card p{
+
+color:#d0d0d0;
+
+line-height:1.8;
+
+}
+
+.service-list{
+
+list-style:none;
+
+padding:0;
+
+margin:25px 0;
+
+}
+
+.service-list li{
+
+margin-bottom:12px;
+
+}
+
+.service-list li::before{
+
+content:"▶ ";
+
+color:#00E5FF;
+
+}
+/*=========================
+WRITEUPS
+==========================*/
+
+.writeup-search{
+
+background:rgba(255,255,255,.05);
+
+padding:18px;
+
+border-radius:50px;
+
+display:flex;
+
+align-items:center;
+
+}
+
+.writeup-search i{
+
+color:#00E5FF;
+
+margin-right:15px;
+
+}
+
+.writeup-search input{
+
+background:transparent;
+
+border:none;
+
+outline:none;
+
+color:white;
+
+width:100%;
+
+}
+
+.filter-btn{
+
+padding:12px 28px;
+
+margin:5px;
+
+border:none;
+
+border-radius:30px;
+
+background:#1b2435;
+
+color:white;
+
+transition:.4s;
+
+}
+
+.filter-btn:hover,
+
+.filter-btn.active{
+
+background:#00E5FF;
+
+color:black;
+
+}
+
+.pdf-icon{
+
+font-size:60px;
+
+color:#ff3d3d;
+
+margin-bottom:20px;
+
+}
+
+.writeup-card{
+
+transition:.4s;
+
+}
+
+.writeup-card:hover{
+
+transform:translateY(-10px);
+
+}

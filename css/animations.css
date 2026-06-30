@@ -1,0 +1,59 @@
+@keyframes rotateBorder{
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translate(-50%,0);
+
+}
+
+50%{
+
+transform:translate(-50%,-15px);
+
+}
+
+100%{
+
+transform:translate(-50%,0);
+
+}
+
+}
+
+@keyframes glow{
+
+0%{
+
+box-shadow:0 0 10px cyan;
+
+}
+
+50%{
+
+box-shadow:0 0 40px cyan;
+
+}
+
+100%{
+
+box-shadow:0 0 10px cyan;
+
+}
+
+}
